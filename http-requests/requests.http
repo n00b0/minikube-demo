@@ -1,0 +1,7 @@
+### Show the main page
+GET http://localhost:8080/hello
+Content-Type: */*
+
+### GET all vehicles
+GET http://localhost:8080/vehicle
+Content-Type: */*
