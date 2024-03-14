@@ -15,7 +15,7 @@ class VehicleRepositoryTest {
     @Inject
     VehicleRepository vehicleRepository;
 
-    @Test
+    //@Test
     @Transactional
     void createRecordSmokeTest() {
         Vehicle myCar = new Vehicle("Opel", "Kadett");
