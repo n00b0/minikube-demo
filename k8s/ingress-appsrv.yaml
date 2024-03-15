@@ -11,5 +11,18 @@ spec:
     services:
     - name: appsrv
       port: 80
-#  tls:
-#    secretName: default-ingress-cert
+#    tls:
+#      secretName: default-ingress-cert
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: appsrv-service
+
+spec:
+  ports:
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+  selector:
+    component: appsrv

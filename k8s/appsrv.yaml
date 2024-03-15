@@ -8,11 +8,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appsrv
+      component: appsrv
   template:
     metadata:
       labels:
-        app: appsrv
+        component: appsrv
     spec:
       containers:
         - name: appsrv
@@ -22,17 +22,5 @@ spec:
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: appsrv
 
-spec:
-  ports:
-    - port: 80
-      targetPort: 8080
-      protocol: TCP
-  selector:
-    component: appsrv
 
